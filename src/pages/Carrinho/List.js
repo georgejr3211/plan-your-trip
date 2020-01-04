@@ -118,6 +118,11 @@ const List = () => {
         dataSource={dataSource}
         columns={columns}
         onChange={handleChange}
+        pagination={{
+          defaultPageSize: 10,
+          showSizeChanger: true,
+          pageSizeOptions: ['10', '20', '30'],
+        }}
       />
     </div>
   );
