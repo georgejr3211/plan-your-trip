@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 INTRODUÇÃO
 
-## Available Scripts
+1.1 TEMA
+GERENCIAMENTO
 
-In the project directory, you can run:
+1.1.1 DELIMITAÇÃO DO TEMA
+GERENCIAMENTO DE VIAGEM PESSOAL
 
-### `yarn start`
+2 PROBLEMA
+  Gerenciamento de viagem facilitaria o cronograma planejado?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3 HIPOTESES
+3.1 O gerenciamento de viagem facilitaria o cronograma planejado
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+3.2 O gerenciamento de viagem tem o papel de previnir gastos desnecessários
 
-### `yarn test`
+3.3 O gerenciamento de viagem não facilitaria o cronograma planejado
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3.4 O gerenciamento de viagem não tem o papel de previnir gastos desnecessários
 
-### `yarn build`
+4 OBJETIVOS
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4.1 Geral
+Analisar o gerenciamento de viagem pessoal
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4.2 Especificos
+Fazer uma lista de compras para uma viagem pessoal;
+Planejar o controle financeiro de uma viagem pessoal;
+Gerenciar o percurso de uma viagem pessoal;
+Controlar os documentos necessários para uma viagem pessoal;
+Armazenar as informações necessárias de uma viagem pessoal;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5 JUSTIFICATIVA
+Gerenciamento de viagem pessoal é o assunto escolhido para esta pesquisa. Tem por finalidade
+analisar o processo a ser desenvolvido na pesquisa, isto é se o gerenciamento de viagem tem papel
+de previnir gastos desnecessários, como também se facilitaria o cronograma planejado nessa viagem. Justifica-se a realização desta pesquisa por julgar ser de importância social, uma vez que a sua relevância se dá na organização de viagem para não haver conflitos com o cronograma planejado.
 
-### `yarn eject`
+6 REFERENCIAL TEÓRICO
+6.1 Gerenciamento (Negrito)
+ (1,25) Entende-se por gerenciamento a organização de passos a serem dados no processo individual de cada ser humano. Gomes (2010, p. 20) descreve que gerenciamento "é o processo..."
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  (1,2) Souza (2012, p. 15) diz que gerenciamento de viagem "..."
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6.1.1 Gerenciamento de viagem
+  (1,2)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6.2 Cronograma
+  (1,2)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+6.3 Controle financeiro
+  (1,2)
 
-## Learn More
+7 METODOLOGIA
+7.1 Area da pesquisa
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7.2 Abordagem da pesquisa
+Esta pesquisa tem caráter quantitativo por se tratar de uma pesquisa de análise...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7.3 Métodos da pesquisa
+Método de abordagem dedutivo porque ela é quantitativa e método de procedimento monográfico
 
-### Code Splitting
+7.4 Tipos de pesquisa
+Será desenvolvida por meio da pesquisa bibliográfica e de campo
+Entende-se por pesquisa bibliográfica...
+A pesquisa de campo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+7.5 Instrumentos de pesquisa
+Os instrumentos de pesquisa serão:
+ - Pesquisa in loco
+ - Questionários sistematizados
 
-### Analyzing the Bundle Size
+7.6 Universo e amostra
+Será considerada como universo da pesquisa todas as lojas de viagens compreendidas no espaço ...
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Amostra a ser considerada será a coleta de dados conseguidas diante das lojas que responderam os questionários
 
-### Making a Progressive Web App
+8 CRONOGRAMA
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+REFERÊNCIAS
