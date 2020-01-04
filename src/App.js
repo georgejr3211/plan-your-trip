@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout } from 'antd';
-
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Container } from './style/global';
 import 'antd/dist/antd.css';
 
@@ -14,11 +14,19 @@ const App = () => {
   return (
     <Container>
       <Layout>
-        <Sidebar collapsed={collapsed} />
-        <Layout>
-          <Header user='George' collapsed={collapsed} setCollapsed={setCollapsed} />
-          <Content />
-        </Layout>
+        <Router>
+          <Sidebar collapsed={collapsed} />
+          <Layout>
+            <Header
+              user='George'
+              collapsed={collapsed}
+              setCollapsed={setCollapsed}
+            />
+            <Switch>
+              <Content />
+            </Switch>
+          </Layout>
+        </Router>
       </Layout>
     </Container>
   );

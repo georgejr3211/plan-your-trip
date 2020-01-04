@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Table } from 'antd';
+import { Table, Input } from 'antd';
+import { Container } from './style';
 
 const List = () => {
   const [filteredInfo, setFilteredInfo] = useState(null);
@@ -20,67 +21,31 @@ const List = () => {
     },
     {
       key: '3',
-      name: 'John',
+      name: 'George',
       age: 42,
       address: '10 Downing Street',
     },
     {
       key: '4',
-      name: 'John',
+      name: 'Alexandre',
       age: 42,
       address: '10 Downing Street',
     },
     {
       key: '5',
-      name: 'John',
+      name: 'Fonseca',
       age: 42,
       address: '10 Downing Street',
     },
     {
       key: '6',
-      name: 'John',
+      name: 'Feitosa',
       age: 42,
       address: '10 Downing Street',
     },
     {
       key: '7',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '8',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '9',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '10',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '11',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '12',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '13',
-      name: 'John',
+      name: 'Junior',
       age: 42,
       address: '10 Downing Street',
     },
@@ -92,17 +57,20 @@ const List = () => {
       dataIndex: 'name',
       key: 'name',
       sorter: (a, b) => a.name.length - b.name.length,
-      sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
+      filters: dataSource.map(data => ({ text: data.name, value: data.name })),
+      onFilter: (value, record) => record.name.indexOf(value) === 0,
     },
     {
       title: 'Age',
       dataIndex: 'age',
       key: 'age',
+      sorter: (a, b) => a.age - b.age,
     },
     {
       title: 'Address',
       dataIndex: 'address',
       key: 'address',
+      sorter: (a, b) => a.address.length - b.address.length,
     },
   ];
 
@@ -112,19 +80,22 @@ const List = () => {
   };
 
   return (
-    <div>
+    <Container>
+      <Input.Search placeholder='Procurar' style={{ marginBottom: 30 }} />
+
       <Table
         tableLayout='fixed'
+        scroll={{ y: 250 }}
         dataSource={dataSource}
         columns={columns}
         onChange={handleChange}
         pagination={{
-          defaultPageSize: 10,
+          defaultPageSize: 5,
           showSizeChanger: true,
-          pageSizeOptions: ['10', '20', '30'],
+          pageSizeOptions: ['5', '10', '20', '30'],
         }}
       />
-    </div>
+    </Container>
   );
 };
 

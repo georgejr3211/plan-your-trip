@@ -24,12 +24,15 @@ export default function Header({ collapsed, setCollapsed, user }) {
         <Col>
           <RowItem type='flex' gutter={20}>
             <Col>
-              <Switch defaultChecked /> Light/Dark theme
+              <Switch defaultChecked /> <small>Light/Dark theme</small>
             </Col>
             <Col>
               <Dropdown overlay={menu}>
                 <span style={{ cursor: 'pointer' }}>
-                  <Avatar icon='user' /> {user}
+                  <Avatar icon='user' />{' '}
+                  <small>
+                    <strong>{user}</strong>
+                  </small>
                 </span>
               </Dropdown>
             </Col>

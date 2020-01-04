@@ -1,6 +1,8 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
 import { Container, Pages } from './style';
+import { Route } from 'react-router-dom';
+
 import Carrinho from '../../../pages/Carrinho';
 
 export default function Content() {
@@ -13,7 +15,7 @@ export default function Content() {
 
       {/* PAGES */}
       <Pages>
-        <Carrinho />
+        <Route exact path='/carrinho' component={Carrinho} />
       </Pages>
     </Container>
   );

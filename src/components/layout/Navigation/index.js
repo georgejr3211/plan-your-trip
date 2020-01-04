@@ -49,7 +49,7 @@ const Navigation = () => {
 
   return (
     <Container>
-      <Menu theme='light' mode='inline' defaultSelectedKeys={['1']}>
+      <Menu theme='light' mode='inline' defaultSelectedKeys={['2']}>
         {data.map(menu => (
           <Menu.Item key={menu.id}>
             <Icon type={menu.icon} />
