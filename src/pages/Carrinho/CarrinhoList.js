@@ -1,100 +1,63 @@
-import React, { useState } from 'react';
-import { Table, Input } from 'antd';
+import React, { useEffect, useState } from 'react';
 import { Container } from './style';
+import { Input } from 'antd';
+import TableComponent from '../../components/TableComponent';
+import CarrinhoService from '../../services/carrinhoService';
 
 const CarrinhoList = () => {
-  const [filteredInfo, setFilteredInfo] = useState(null);
-  const [sortedInfo, setSortedInfo] = useState({});
+  const [dataSource, setDataSource] = useState([]);
 
-  const dataSource = [
-    {
-      key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
-    },
-    {
-      key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '3',
-      name: 'George',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '4',
-      name: 'Alexandre',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '5',
-      name: 'Fonseca',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '6',
-      name: 'Feitosa',
-      age: 42,
-      address: '10 Downing Street',
-    },
-    {
-      key: '7',
-      name: 'Junior',
-      age: 42,
-      address: '10 Downing Street',
-    },
-  ];
+  useEffect(() => {
+    const carrinhoService = new CarrinhoService();
+    carrinhoService.getAll().then(data => setDataSource(data.data));
+    // carrinhoService.getAll().then(data => setDataSource(data.data));
+  }, []);
 
   const columns = [
     {
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
-      sorter: (a, b) => a.name.length - b.name.length,
-      filters: dataSource.map(data => ({ text: data.name, value: data.name })),
-      onFilter: (value, record) => record.name.indexOf(value) === 0,
+      title: 'Item',
+      dataIndex: 'item',
+      key: 'item',
+      sorter: (a, b) => a.item.length - b.item.length,
+      filters: dataSource.map(data => ({ text: data.item, value: data.item })),
+      onFilter: (value, record) => record.item.indexOf(value) === 0,
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
-      sorter: (a, b) => a.age - b.age,
+      title: 'Preço estimado',
+      dataIndex: 'precoEstimado',
+      key: 'precoEstimado',
+      sorter: (a, b) => a.precoEstimado - b.precoEstimado,
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
-      sorter: (a, b) => a.address.length - b.address.length,
+      title: 'Preço pago',
+      dataIndex: 'precoPago',
+      key: 'precoPago',
+      sorter: (a, b) => a.precoPago - b.precoPago,
+    },
+    {
+      title: 'Prioridade',
+      dataIndex: 'prioridade',
+      key: 'prioridade',
+      sorter: (a, b) => a.prioridade - b.prioridade,
+    },
+    {
+      title: 'Produto adquirido',
+      dataIndex: 'produtoAdquirido',
+      key: 'produtoAdquirido',
+      sorter: (a, b) => a.produtoAdquirido - b.produtoAdquirido,
+    },
+    {
+      title: 'Observação',
+      dataIndex: 'observacao',
+      key: 'observacao',
+      sorter: (a, b) => a.observacao.length - b.observacao.length,
     },
   ];
-
-  const handleChange = (pagination, filters, sorter) => {
-    setSortedInfo(sorter);
-    setFilteredInfo(filters);
-  };
 
   return (
     <Container>
       <Input.Search placeholder='Procurar' style={{ marginBottom: 30 }} />
-
-      <Table
-        tableLayout='fixed'
-        scroll={{ y: 250 }}
-        dataSource={dataSource}
-        columns={columns}
-        onChange={handleChange}
-        pagination={{
-          defaultPageSize: 5,
-          showSizeChanger: true,
-          pageSizeOptions: ['5', '10', '20', '30'],
-        }}
-      />
+      <TableComponent columns={columns} dataSource={dataSource} height={300} />
     </Container>
   );
 };

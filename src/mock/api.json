@@ -1,0 +1,54 @@
+{
+  "carrinho": [
+    {
+      "id": 1,
+      "item": "Jaqueta",
+      "precoEstimado": 135.0,
+      "precoPago": 0,
+      "prioridade": 1,
+      "produtoAdquirido": false,
+      "observacao": null,
+      "imagem": null
+    },
+    {
+      "id": 2,
+      "item": "Xiaomi Mi 8",
+      "precoEstimado": 2000.0,
+      "precoPago": 0,
+      "prioridade": 3,
+      "produtoAdquirido": false,
+      "observacao": null,
+      "imagem": null
+    },
+    {
+      "id": 3,
+      "item": "Capa para MacBook",
+      "precoEstimado": 120.0,
+      "precoPago": 0,
+      "prioridade": 1,
+      "produtoAdquirido": false,
+      "observacao": null,
+      "imagem": null
+    },
+    {
+      "id": 4,
+      "item": "Óculos de sol",
+      "precoEstimado": 70.0,
+      "precoPago": 0,
+      "prioridade": 1,
+      "produtoAdquirido": false,
+      "observacao": null,
+      "imagem": null
+    },
+    {
+      "id": 5,
+      "item": "Produtos para o escritório",
+      "precoEstimado": 200.0,
+      "precoPago": 0,
+      "prioridade": 2,
+      "produtoAdquirido": false,
+      "observacao": null,
+      "imagem": null
+    }
+  ]
+}

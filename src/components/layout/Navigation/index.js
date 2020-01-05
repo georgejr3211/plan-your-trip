@@ -1,8 +1,8 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-import { Container } from './style';
+import { NavigationItem } from './style';
 
-const Navigation = () => {
+const Navigation = ({ theme = 'light' }) => {
   const data = [
     { id: 1, title: 'Home', path: '/', icon: 'home', children: [], status: 1 },
     {
@@ -48,16 +48,16 @@ const Navigation = () => {
   ];
 
   return (
-    <Container>
-      <Menu theme='light' mode='inline' defaultSelectedKeys={['2']}>
-        {data.map(menu => (
-          <Menu.Item key={menu.id}>
+    <Menu theme={theme} mode='inline'>
+      {data.map(menu => (
+        <Menu.Item key={menu.id}>
+          <NavigationItem to={menu.path}>
             <Icon type={menu.icon} />
             <span>{menu.title}</span>
-          </Menu.Item>
-        ))}
-      </Menu>
-    </Container>
+          </NavigationItem>
+        </Menu.Item>
+      ))}
+    </Menu>
   );
 };
 

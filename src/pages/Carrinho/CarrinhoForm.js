@@ -1,23 +1,11 @@
 import React from 'react';
-import {
-  Input,
-  Radio,
-  Row,
-  Col,
-  InputNumber,
-  Checkbox,
-  Button,
-  Icon,
-  Upload,
-} from 'antd';
+import { Input, Radio, Row, Col, InputNumber, Checkbox, Button } from 'antd';
+import UploadFile from '../../components/UploadFileComponent';
 import { Container, Form } from './style';
 
 const CarrinhoForm = ({ form }) => {
   const {
     getFieldDecorator,
-    getFieldsError,
-    getFieldError,
-    isFieldTouched,
   } = form;
 
   const formItemLayout = {
@@ -36,16 +24,9 @@ const CarrinhoForm = ({ form }) => {
     console.log('deu submit');
   };
 
-  const uploadButton = (
-    <div>
-      <Icon type='plus' />
-      <div className='ant-upload-text'>Upload</div>
-    </div>
-  );
-
   return (
     <Container>
-      <h1>Adicionar item no carrinho</h1>
+      <h1>Adicionar item ao carrinho</h1>
 
       <Form {...formItemLayout} onSubmit={e => handleSubmit(e)}>
         <Form.Item label='Nome'>
@@ -109,16 +90,10 @@ const CarrinhoForm = ({ form }) => {
         <Form.Item label='Observação'>
           {getFieldDecorator('observacao')(<Input.TextArea />)}
         </Form.Item>
+
         <Form.Item label='Foto do Produto'>
-          <Upload
-            name='avatar'
-            listType='picture-card'
-            className='avatar-uploader'
-            showUploadList={false}
-            action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
-          >
-            {uploadButton}
-          </Upload>
+          <UploadFile name='img_produto' showUploadList={false} />
+
           <Row type='flex' gutter={20} style={{ marginTop: 30 }}>
             <Col>
               <Button type='primary' htmlType='submit'>
