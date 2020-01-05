@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Trigger, RowItem } from './style';
-import { Col, Switch, Avatar, Dropdown, Menu, Button, Icon } from 'antd';
+import { Col, Switch, Avatar, Dropdown, Menu } from 'antd';
 
 export default function Header({ collapsed, setCollapsed, user }) {
   const toggle = () => setCollapsed(!collapsed);

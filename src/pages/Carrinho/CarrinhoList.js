@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table, Input } from 'antd';
 import { Container } from './style';
 
-const List = () => {
+const CarrinhoList = () => {
   const [filteredInfo, setFilteredInfo] = useState(null);
   const [sortedInfo, setSortedInfo] = useState({});
 
@@ -99,4 +99,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default CarrinhoList;
