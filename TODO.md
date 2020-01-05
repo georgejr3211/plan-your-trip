@@ -1,6 +1,4 @@
-[] - Troca de tema
-[] - Instalar Redux
-[] - Dados dinamicos
-[x] - Layout da aplicação
-[] - Tela de compras
-  [] - CRUD
+Adicionar troca de tema
+filtros
+notificacao
+configuracao

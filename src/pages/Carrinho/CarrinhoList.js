@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from './style';
-import { Input } from 'antd';
+import { Input, Icon } from 'antd';
 import TableComponent from '../../components/TableComponent';
 import CarrinhoService from '../../services/carrinhoService';
 
@@ -8,10 +8,52 @@ const CarrinhoList = () => {
   const [dataSource, setDataSource] = useState([]);
 
   useEffect(() => {
-    const carrinhoService = new CarrinhoService();
-    carrinhoService.getAll().then(data => setDataSource(data.data));
-    // carrinhoService.getAll().then(data => setDataSource(data.data));
+    setTimeout(() => list(), 1000);
   }, []);
+
+  const list = () => {
+    const carrinhoService = new CarrinhoService();
+    carrinhoService.getAll().then(c => {
+      const items = c.data.map(carrinho => {
+        switch (carrinho.prioridade) {
+          case 1:
+            carrinho.prioridade = 'Baixa';
+            break;
+
+          case 2:
+            carrinho.prioridade = 'Média';
+            break;
+
+          case 3:
+            carrinho.prioridade = 'Alta';
+            break;
+          default:
+            carrinho.prioridade = 'Outros';
+            break;
+        }
+
+        switch (carrinho.produtoAdquirido) {
+          case true:
+            carrinho.produtoAdquirido = (
+              <Icon
+                type='smile'
+                theme='twoTone'
+                twoToneColor='#52c41a'
+              />
+            );
+            break;
+
+          default:
+            carrinho.produtoAdquirido = <Icon type='frown'/>;
+            break;
+        }
+
+        return carrinho;
+      });
+
+      setDataSource(items);
+    });
+  };
 
   const columns = [
     {
