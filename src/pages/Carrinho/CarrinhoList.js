@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Container } from './style';
 import { Input, Icon } from 'antd';
 import TableComponent from '../../components/TableComponent';
@@ -6,7 +7,7 @@ import CarrinhoService from '../../services/carrinhoService';
 
 const CarrinhoList = () => {
   const [dataSource, setDataSource] = useState([]);
-
+  const carrinhoItems = useSelector(state => state.carrinhoReducer.data);
   useEffect(() => {
     setTimeout(() => list(), 1000);
   }, []);
@@ -35,16 +36,12 @@ const CarrinhoList = () => {
         switch (carrinho.produtoAdquirido) {
           case true:
             carrinho.produtoAdquirido = (
-              <Icon
-                type='smile'
-                theme='twoTone'
-                twoToneColor='#52c41a'
-              />
+              <Icon type='smile' theme='twoTone' twoToneColor='#52c41a' />
             );
             break;
 
           default:
-            carrinho.produtoAdquirido = <Icon type='frown'/>;
+            carrinho.produtoAdquirido = <Icon type='frown' />;
             break;
         }
 
@@ -98,6 +95,7 @@ const CarrinhoList = () => {
 
   return (
     <Container>
+      {carrinhoItems.map(data => console.log(data))}
       <Input.Search placeholder='Procurar' style={{ marginBottom: 30 }} />
       <TableComponent columns={columns} dataSource={dataSource} height={300} />
     </Container>

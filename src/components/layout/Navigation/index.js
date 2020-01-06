@@ -1,6 +1,6 @@
 import React from 'react';
-import { Menu, Icon } from 'antd';
-import { NavigationItem } from './style';
+import { Icon } from 'antd';
+import { NavigationMenu, NavigationItem } from './style';
 
 const Navigation = ({ theme = 'light' }) => {
   const data = [
@@ -48,16 +48,16 @@ const Navigation = ({ theme = 'light' }) => {
   ];
 
   return (
-    <Menu theme={theme} mode='inline'>
+    <NavigationMenu theme={theme} mode='inline'>
       {data.map(menu => (
-        <Menu.Item key={menu.id}>
+        <NavigationMenu.Item key={menu.id}>
           <NavigationItem to={menu.path}>
             <Icon type={menu.icon} />
             <span>{menu.title}</span>
           </NavigationItem>
-        </Menu.Item>
+        </NavigationMenu.Item>
       ))}
-    </Menu>
+    </NavigationMenu>
   );
 };
 

@@ -4,7 +4,7 @@ import { Col, Switch, Avatar, Dropdown, Menu } from 'antd';
 
 export default function Header({ collapsed, setCollapsed, user }) {
   const toggle = () => setCollapsed(!collapsed);
-
+  
   const menu = () => (
     <Menu>
       <Menu.Item>Perfil</Menu.Item>

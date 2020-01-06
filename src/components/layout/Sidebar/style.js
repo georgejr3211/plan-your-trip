@@ -7,4 +7,5 @@ export const Container = styled(Layout.Sider)`
   background: #fff !important;
 `;
 
-export const Logo = styled.div``;
+export const Logo = styled.div`
+`;
